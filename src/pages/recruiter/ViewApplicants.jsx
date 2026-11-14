@@ -37,8 +37,8 @@ export default function ViewApplicants() {
   };
 
   return (
-    <div className="max-w-4xl mx-auto px-6 py-10">
-      <h1 className="font-display text-3xl font-bold text-(--color-navy) mb-1">
+    <div className="max-w-4xl mx-auto px-4 sm:px-6 py-6 sm:py-10">
+      <h1 className="font-display text-2xl sm:text-3xl font-bold text-(--color-navy) mb-1">
         Applicants
       </h1>
       <p className="text-gray-500 mb-8">Review and update the status of each candidate.</p>

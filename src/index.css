@@ -27,3 +27,12 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   outline: 2px solid var(--color-amber);
   outline-offset: 2px;
 }
+
+/* responsive safety */
+html, body { overflow-x: hidden; }
+img, svg, video { max-width: 100%; }
+@layer base {
+  @media (max-width: 767px) {
+    input, textarea, select { font-size: 16px; } /* prevents iOS zoom-on-focus */
+  }
+}

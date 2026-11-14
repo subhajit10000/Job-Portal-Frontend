@@ -67,7 +67,7 @@ export default function JobForm({
   return (
     <form
       onSubmit={handleSubmit}
-      className="bg-white rounded-xl shadow-lg p-6 max-w-3xl mx-auto space-y-5"
+      className="bg-white rounded-xl shadow-lg p-4 sm:p-6 max-w-3xl mx-auto space-y-5"
     >
       {error && (
         <div className="bg-red-100 border border-red-300 text-red-600 px-4 py-2 rounded">
@@ -87,7 +87,7 @@ export default function JobForm({
         />
       </div>
 
-      <div className="grid md:grid-cols-2 gap-4">
+      <div className="grid sm:grid-cols-2 gap-4">
         <div>
           <label className="font-medium">Company</label>
           <input
@@ -111,7 +111,7 @@ export default function JobForm({
         </div>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-4">
+      <div className="grid sm:grid-cols-2 gap-4">
         <div>
           <label className="font-medium">Job Type</label>
 
@@ -170,7 +170,7 @@ export default function JobForm({
       <button
         type="submit"
         disabled={loading}
-        className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 disabled:opacity-50"
+        className="w-full sm:w-auto bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 disabled:opacity-50"
       >
         {loading ? "Saving..." : submitLabel}
       </button>

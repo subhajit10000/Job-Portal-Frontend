@@ -20,8 +20,8 @@ export default function MyApplications() {
   }, []);
 
   return (
-    <div className="max-w-4xl mx-auto px-6 py-10">
-      <h1 className="font-display text-3xl font-bold text-(--color-navy) mb-1">
+    <div className="max-w-4xl mx-auto px-4 sm:px-6 py-6 sm:py-10">
+      <h1 className="font-display text-2xl sm:text-3xl font-bold text-(--color-navy) mb-1">
         My Applications
       </h1>
       <p className="text-gray-500 mb-8">Track the status of jobs you've applied to.</p>

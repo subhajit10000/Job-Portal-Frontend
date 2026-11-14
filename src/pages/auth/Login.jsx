@@ -57,8 +57,8 @@ export default function Login() {
   };
 
   return (
-    <div className="min-h-[80vh] flex items-center justify-center px-4 bg-gray-50">
-      <div className="w-full max-w-sm bg-white shadow-lg rounded-xl border border-gray-200 p-8">
+    <div className="min-h-[80vh] flex items-center justify-center px-4 py-6 bg-gray-50">
+      <div className="w-full max-w-sm bg-white shadow-lg rounded-xl border border-gray-200 p-5 sm:p-8">
         <h1 className="text-2xl font-bold text-(--color-navy) mb-2">
           Welcome Back
         </h1>

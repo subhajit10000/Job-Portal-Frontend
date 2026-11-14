@@ -47,12 +47,12 @@ export default function JobDetails() {
     }
   };
 
-  if (loading) return <p className="text-gray-500 px-6 py-10">Loading job...</p>;
-  if (!job) return <p className="text-(--color-danger) px-6 py-10">{error || "Job not found."}</p>;
+  if (loading) return <p className="text-gray-500 px-4 sm:px-6 py-6 sm:py-10">Loading job...</p>;
+  if (!job) return <p className="text-(--color-danger) px-4 sm:px-6 py-6 sm:py-10">{error || "Job not found."}</p>;
 
   return (
-    <div className="max-w-3xl mx-auto px-6 py-10">
-      <h1 className="font-display text-3xl font-bold text-(--color-navy)">{job.title}</h1>
+    <div className="max-w-3xl mx-auto px-4 sm:px-6 py-6 sm:py-10">
+      <h1 className="font-display text-2xl sm:text-3xl font-bold text-(--color-navy)">{job.title}</h1>
       <p className="text-gray-500 mt-1">
         {job.company} {job.location && `· ${job.location}`}
       </p>
@@ -70,20 +70,20 @@ export default function JobDetails() {
         )}
       </div>
 
-      <div className="bg-white border border-(--color-border) rounded-xl p-6 mt-6">
+      <div className="bg-white border border-(--color-border) rounded-xl p-4 sm:p-6 mt-6">
         <h2 className="font-display font-bold text-lg mb-2">Description</h2>
-        <p className="text-sm text-gray-700 whitespace-pre-line">{job.description}</p>
+        <p className="text-sm text-gray-700 whitespace-pre-line break-words">{job.description}</p>
 
         {job.requirements && (
           <>
             <h2 className="font-display font-bold text-lg mt-5 mb-2">Requirements</h2>
-            <p className="text-sm text-gray-700 whitespace-pre-line">{job.requirements}</p>
+            <p className="text-sm text-gray-700 whitespace-pre-line break-words">{job.requirements}</p>
           </>
         )}
       </div>
 
       {(!user || user.role === "candidate") && (
-        <div className="bg-white border border-(--color-border) rounded-xl p-6 mt-6">
+        <div className="bg-white border border-(--color-border) rounded-xl p-4 sm:p-6 mt-6">
           <h2 className="font-display font-bold text-lg mb-3">Apply for this job</h2>
 
           {message && (
@@ -108,7 +108,7 @@ export default function JobDetails() {
             <button
               type="submit"
               disabled={applying}
-              className="bg-(--color-amber) text-(--color-navy-dark) font-semibold px-4 py-2 rounded-md hover:brightness-95 transition disabled:opacity-50 self-start"
+              className="bg-(--color-amber) text-(--color-navy-dark) font-semibold px-4 py-2 rounded-md hover:brightness-95 transition disabled:opacity-50 self-start w-full sm:w-auto"
             >
               {applying ? "Submitting..." : user ? "Apply Now" : "Log in to Apply"}
             </button>

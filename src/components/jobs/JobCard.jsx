@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 
 export default function JobCard({ job }) {
   return (
-    <div className="bg-white border border-(--color-border) rounded-xl p-5 hover:shadow-md transition-shadow flex flex-col gap-3">
-      <div>
+    <div className="bg-white border border-(--color-border) rounded-xl p-4 sm:p-5 hover:shadow-md transition-shadow flex flex-col gap-3">
+      <div className="min-w-0 break-words">
         <h3 className="font-display text-lg font-bold text-(--color-navy)">
           {job.title}
         </h3>

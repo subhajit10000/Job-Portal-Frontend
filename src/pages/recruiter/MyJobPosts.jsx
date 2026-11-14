@@ -34,17 +34,17 @@ export default function MyJobPosts() {
   };
 
   return (
-    <div className="max-w-5xl mx-auto px-6 py-10">
-      <div className="flex items-center justify-between mb-8">
+    <div className="max-w-5xl mx-auto px-4 sm:px-6 py-6 sm:py-10">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6 sm:mb-8">
         <div>
-          <h1 className="font-display text-3xl font-bold text-(--color-navy)">
+          <h1 className="font-display text-2xl sm:text-3xl font-bold text-(--color-navy)">
             My Job Posts
           </h1>
           <p className="text-gray-500 mt-1">Manage the roles you've posted.</p>
         </div>
         <Link
           to="/post-job"
-          className="bg-(--color-amber) text-(--color-navy-dark) font-semibold px-4 py-2 rounded-md hover:brightness-95 transition"
+          className="bg-(--color-amber) text-(--color-navy-dark) font-semibold px-4 py-2 rounded-md hover:brightness-95 transition text-center"
         >
           + Post New Job
         </Link>
@@ -60,7 +60,7 @@ export default function MyJobPosts() {
         {jobs.map((job) => (
           <div
             key={job._id}
-            className="bg-white border border-(--color-border) rounded-xl p-5 flex items-center justify-between"
+            className="bg-white border border-(--color-border) rounded-xl p-4 sm:p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-3"
           >
             <div>
               <h3 className="font-display font-bold text-(--color-navy)">{job.title}</h3>
@@ -68,7 +68,7 @@ export default function MyJobPosts() {
                 {job.location} {job.jobType && `· ${job.jobType}`}
               </p>
             </div>
-            <div className="flex gap-2 text-sm font-medium">
+            <div className="flex flex-wrap gap-2 text-sm font-medium">
               <Link
                 to={`/my-jobs/${job._id}/applicants`}
                 className="px-3 py-1.5 rounded-md border border-(--color-border) hover:border-(--color-navy) hover:text-(--color-navy) transition"

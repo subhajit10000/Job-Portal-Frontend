@@ -18,9 +18,9 @@ export default function ApplicationCard({ application, isRecruiterView, onStatus
   const { label, tone } = statusConfig[status] || statusConfig.applied;
 
   return (
-    <div className="bg-white border border-(--color-border) rounded-xl p-5 flex flex-col gap-3">
-      <div className="flex items-start justify-between gap-3">
-        <div>
+    <div className="bg-white border border-(--color-border) rounded-xl p-4 sm:p-5 flex flex-col gap-3">
+      <div className="flex flex-col-reverse sm:flex-row items-start justify-between gap-2 sm:gap-3">
+        <div className="min-w-0 break-words">
           <h3 className="font-display font-bold text-(--color-navy)">
             {isRecruiterView ? application.candidate?.name : application.job?.title}
           </h3>
@@ -38,7 +38,7 @@ export default function ApplicationCard({ application, isRecruiterView, onStatus
       )}
 
       {isRecruiterView && onStatusChange && (
-        <div className="flex gap-2 mt-1">
+        <div className="flex flex-wrap gap-2 mt-1">
           {actionableStatuses.map((s) => (
             <button
               key={s}

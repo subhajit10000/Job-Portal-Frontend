@@ -21,12 +21,12 @@ export default function Home() {
   return (
     <div>
       {/* HERO */}
-      <section className="max-w-6xl mx-auto px-6 pt-16 pb-20 grid md:grid-cols-2 gap-12 items-center">
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 pt-10 sm:pt-16 pb-12 sm:pb-20 grid md:grid-cols-2 gap-8 md:gap-12 items-center">
         <div>
           <span className="inline-block text-xs font-semibold tracking-wide uppercase bg-(--color-bg) border border-(--color-border) text-(--color-navy) px-3 py-1 rounded-full mb-5">
             Built for candidates and recruiters
           </span>
-          <h1 className="font-display text-4xl md:text-5xl font-extrabold text-(--color-navy) leading-tight">
+          <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-(--color-navy) leading-tight">
             Every application, tracked from first click to offer letter.
           </h1>
           <p className="text-gray-600 mt-5 text-lg max-w-md">
@@ -40,13 +40,13 @@ export default function Home() {
               <>
                 <Link
                   to="/register"
-                  className="bg-(--color-amber) text-(--color-navy-dark) font-semibold px-6 py-3 rounded-md hover:brightness-95 transition"
+                  className="bg-(--color-amber) text-(--color-navy-dark) font-semibold px-5 sm:px-6 py-3 rounded-md hover:brightness-95 transition"
                 >
                   Get Started
                 </Link>
                 <Link
                   to="/jobs"
-                  className="border border-(--color-border) text-(--color-navy) font-semibold px-6 py-3 rounded-md hover:border-(--color-navy) transition"
+                  className="border border-(--color-border) text-(--color-navy) font-semibold px-5 sm:px-6 py-3 rounded-md hover:border-(--color-navy) transition"
                 >
                   Browse Jobs
                 </Link>
@@ -55,7 +55,7 @@ export default function Home() {
             {user?.role === "candidate" && (
               <Link
                 to="/jobs"
-                className="bg-(--color-amber) text-(--color-navy-dark) font-semibold px-6 py-3 rounded-md hover:brightness-95 transition"
+                className="bg-(--color-amber) text-(--color-navy-dark) font-semibold px-5 sm:px-6 py-3 rounded-md hover:brightness-95 transition"
               >
                 Browse Jobs
               </Link>
@@ -63,14 +63,14 @@ export default function Home() {
             {user?.role === "recruiter" && (
               <Link
                 to="/post-job"
-                className="bg-(--color-amber) text-(--color-navy-dark) font-semibold px-6 py-3 rounded-md hover:brightness-95 transition"
+                className="bg-(--color-amber) text-(--color-navy-dark) font-semibold px-5 sm:px-6 py-3 rounded-md hover:brightness-95 transition"
               >
                 Post a Job
               </Link>
             )}
           </div>
 
-          <div className="flex gap-8 mt-12">
+          <div className="flex flex-wrap gap-x-8 gap-y-4 mt-10 sm:mt-12">
             {stats.map((s) => (
               <div key={s.label}>
                 <p className="font-display text-2xl font-bold text-(--color-navy)">{s.value}</p>
@@ -81,12 +81,12 @@ export default function Home() {
         </div>
 
         {/* Signature element: live application tracker mock, mirrors the real status pills used across the app */}
-        <div className="bg-white border border-(--color-border) rounded-2xl p-6 shadow-sm">
+        <div className="bg-white border border-(--color-border) rounded-2xl p-4 sm:p-6 shadow-sm">
           <p className="text-xs font-semibold uppercase tracking-wide text-gray-400 mb-4">
             Application progress
           </p>
           <div className="flex flex-col gap-3">
-            <div className="flex items-center justify-between border border-(--color-border) rounded-lg px-4 py-3">
+            <div className="flex items-center justify-between gap-2 border border-(--color-border) rounded-lg px-3 sm:px-4 py-3">
               <div>
                 <p className="font-semibold text-sm text-(--color-navy)">Frontend Developer</p>
                 <p className="text-xs text-gray-500">Acme Robotics · Remote</p>
@@ -95,7 +95,7 @@ export default function Home() {
                 Hired
               </span>
             </div>
-            <div className="flex items-center justify-between border border-(--color-border) rounded-lg px-4 py-3">
+            <div className="flex items-center justify-between gap-2 border border-(--color-border) rounded-lg px-3 sm:px-4 py-3">
               <div>
                 <p className="font-semibold text-sm text-(--color-navy)">Product Designer</p>
                 <p className="text-xs text-gray-500">Northwind Labs · Bengaluru</p>
@@ -104,7 +104,7 @@ export default function Home() {
                 Shortlisted
               </span>
             </div>
-            <div className="flex items-center justify-between border border-(--color-border) rounded-lg px-4 py-3">
+            <div className="flex items-center justify-between gap-2 border border-(--color-border) rounded-lg px-3 sm:px-4 py-3">
               <div>
                 <p className="font-semibold text-sm text-(--color-navy)">Backend Engineer</p>
                 <p className="text-xs text-gray-500">Fintrail · Pune</p>
@@ -130,7 +130,7 @@ export default function Home() {
 
       {/* HOW IT WORKS */}
       <section className="bg-white border-y border-(--color-border)">
-        <div className="max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-10">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-10 sm:py-16 grid md:grid-cols-2 gap-10">
           <div>
             <p className="text-xs font-semibold uppercase tracking-wide text-(--color-amber) mb-2">
               For candidates
@@ -192,8 +192,8 @@ export default function Home() {
 
       {/* CTA */}
       <section className="bg-(--color-navy)">
-        <div className="max-w-6xl mx-auto px-6 py-16 text-center">
-          <h2 className="font-display text-3xl font-bold text-white mb-3">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-10 sm:py-16 text-center">
+          <h2 className="font-display text-2xl sm:text-3xl font-bold text-white mb-3">
             Ready to move faster on your next hire — or your next role?
           </h2>
           <p className="text-white/70 mb-8 max-w-xl mx-auto">
